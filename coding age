@@ -1,0 +1,29 @@
+package selfProgramming;
+import java.util.Scanner;
+public class age {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int age = readAge();
+
+		if(age <= 5) {
+			System.out.println("Children Category");
+		}else if(age <= 10) {
+			System.out.println("Adolescent Category");
+		}else {
+			System.out.println("Adult Category");
+		}
+	}
+
+	public static int readAge() {
+		Scanner scanMe = new Scanner(System.in);
+		int age = 0;
+		do {
+			System.out.println("Please enter your age (1-100) : ");
+			age = scanMe.nextInt();
+		}while ((age < 1) || (age > 100));
+		return age;
+
+	}
+
+}
